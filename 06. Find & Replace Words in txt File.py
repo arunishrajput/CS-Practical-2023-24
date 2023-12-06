@@ -4,7 +4,6 @@ content = file.read()
 
 if find not in content:
     print('Find word', find, 'not found')
-    file.close()
 else:
     replace = input('Enter word to replace with:')
     replaced_content = content.replace(find,replace)
