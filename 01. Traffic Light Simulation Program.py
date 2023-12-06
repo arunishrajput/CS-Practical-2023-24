@@ -3,11 +3,11 @@ def traficlight():
     code = light(input('Enter the status of light: ').upper())
     
     if code == 0:
-        print('Stop')
+        print('STOP, your life is precious')
     elif code == 1:
-        print('Ready to Go')
+        print('Please WAIT till light is green')
     elif code == 2:
-        print('Go')
+        print('GO! Thanks for being patient')
     elif code == 3:
         print('Enter Valid Colour')
 
@@ -23,3 +23,4 @@ def light(status):
         return 3
     
 traficlight()
+print('SPEED THRILLS BUT KILLS')
