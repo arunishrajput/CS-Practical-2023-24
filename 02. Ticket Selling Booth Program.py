@@ -12,15 +12,12 @@ def sell_ticket():
     print("Ticket sold!")
 
 def display_num_people():
-    global num_people
     print("Number of people visited:", num_people)
 
 def display_tickets_sold():
-    global tickets_sold
     print("Number of tickets sold:", tickets_sold)
 
 def display_total_money_collected():
-    global total_money_collected
     print("Total money collected:", total_money_collected)
 
 while True:
