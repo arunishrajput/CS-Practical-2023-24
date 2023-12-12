@@ -106,7 +106,7 @@ while True:
 5. Delete Product
 0. Exit
 Enter your choice:'''))
-    if choice == 0:
+    if choice == 1:
         write()
     elif choice == 2:
         display()
@@ -116,7 +116,7 @@ Enter your choice:'''))
         modify()
     elif choice == 5:
         delete()
-    elif choice == 6:
+    elif choice == 0:
         break
     else:
         print('Enter correct choice....')
