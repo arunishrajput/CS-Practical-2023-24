@@ -1,13 +1,19 @@
 import csv, os
 
+def make():
+    with open('student.csv','w') as file:
+        write = csv.writer(file)
+        write.writerow(['Roll','Name','Address','Contact No.'])
+
 def create():
     if not os.path.exists('student.csv'):
-        with open('student.csv','w') as file:
-            write = csv.writer(file)
-            write.writerow(['Roll','Name','Address','Contact No.'])
+        make()
         print('File created successfully!')
     else:
-        print('File already exists!')
+        ch = (input('File already exists...Do you want to overwrite(Y/N)?')).upper()
+        if ch == 'Y':
+            make()
+            print('File Overwritten Successfully!')
 
 def write():
     if os.path.exists('student.csv'):
