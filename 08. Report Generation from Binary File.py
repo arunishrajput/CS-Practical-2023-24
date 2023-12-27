@@ -1,0 +1,55 @@
+import pickle
+
+def write():
+    file = open('markrec.dat', 'ab')
+    name = input('Enter name of the student: ')
+    eng = int(input('Enter English marks: '))
+    cs = int(input('Enter CS marks: '))
+    phy = int(input('Enter Physics marks: '))
+    chem = int(input('Enter Chemistry marks: '))
+    math = int(input('Enter Mathematics marks: '))
+    record = (name,eng,cs,phy,chem,math)
+    pickle.dump(record,file)
+    print('Record saved successfully!')
+    file.close()
+
+def display():
+    try:
+        file = open('markrec.dat', 'rb')
+        name = input('Enter name of the student to search: ')
+        try:
+            while True:
+                rec = pickle.load(file)
+                if rec[0] == name:
+                    total = rec[1]+rec[2]+rec[3]+rec[4]+rec[5]
+                    percentage = total/5
+                    print('Name of student:', rec[0])
+                    print('Subject Marks:-')
+                    print('English:', rec[1])
+                    print('CS:', rec[2])
+                    print('Physics:', rec[3])
+                    print('Chemistry:', rec[4])
+                    print('Mathematics:', rec[5])
+                    print('Total Marks:', total)
+                    print('Percentage:', percentage)
+                    break
+        except EOFError:
+            print('Student not found!')
+        file.close()
+    except FileNotFoundError:
+        print('markrec file not found!')
+
+while True:
+    choice = int(input('''
+1. Enter New Record
+2. Display Report of Student
+0. Exit
+Enter your choice:'''))
+    if choice == 1:
+        write()
+    elif choice == 2:
+        display()
+    elif choice == 0:
+        break
+    else:
+        print('Enter correct choice....')

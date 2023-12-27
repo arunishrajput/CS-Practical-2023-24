@@ -38,6 +38,7 @@ def search():
                     break
         except EOFError:
             print('Record not found!')
+        file.close()
     except FileNotFoundError:
         print('Stock file not found!')
 
