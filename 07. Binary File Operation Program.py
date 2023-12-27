@@ -12,7 +12,7 @@ def write():
     file.close()
 
 def display():
-    try:
+    if os.path.exists('stock.dat'):
         file = open('stock.dat','rb')
         count = 0
         try:
@@ -23,11 +23,11 @@ def display():
         except EOFError:
             print('Total record:',count)
         file.close()
-    except FileNotFoundError:
+    else:
         print('Stock file not found!')
 
 def search():
-    try:
+    if os.path.exists('stock.dat'):
         file = open('stock.dat','rb')
         ID = int(input('Enter product ID to search: '))
         try:
@@ -39,11 +39,11 @@ def search():
         except EOFError:
             print('Record not found!')
         file.close()
-    except FileNotFoundError:
+    else:
         print('Stock file not found!')
 
 def modify():
-    try:
+    if os.path.exists('stock.dat'):
         file = open('stock.dat','rb')
         newfile = open('newstock.dat','wb')
         ID = int(input('Enter product ID to modify: '))
@@ -70,11 +70,11 @@ def modify():
         newfile.close()
         os.remove('stock.dat')
         os.rename('newstock.dat','stock.dat')
-    except FileNotFoundError:
+    else:
         print('File not found!')
 
 def delete():
-    try:
+    if os.path.exists('stock.dat'):
         file = open('stock.dat','rb')
         newfile = open('newstock.dat','wb')
         ID = int(input('Enter ID to delete: '))
@@ -95,7 +95,7 @@ def delete():
         newfile.close()
         os.remove('stock.dat')
         os.rename('newstock.dat','stock.dat')
-    except FileNotFoundError:
+    else:
         print('File Not Found!')
 
 while True:
