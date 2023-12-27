@@ -1,4 +1,4 @@
-import pickle
+import pickle, os
 
 def write():
     file = open('markrec.dat', 'ab')
@@ -14,7 +14,7 @@ def write():
     file.close()
 
 def display():
-    try:
+    if os.path.exists('markrec.dat'):
         file = open('markrec.dat', 'rb')
         name = input('Enter name of the student to search: ')
         try:
@@ -36,7 +36,7 @@ def display():
         except EOFError:
             print('Student not found!')
         file.close()
-    except FileNotFoundError:
+    else:
         print('markrec file not found!')
 
 while True:
