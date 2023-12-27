@@ -1,5 +1,4 @@
-import csv
-import os
+import csv, os
 
 def create():
     if not os.path.exists('student.csv'):
