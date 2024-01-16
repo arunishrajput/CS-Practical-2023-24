@@ -24,7 +24,7 @@ while True:
 3. Display report
 4. Display number of tickets sold
 0. Exit'''
-    choice = int(input(f"{msg},Enter your choice: "))
+    choice = int(input(f"{msg}\nEnter your choice: "))
     if choice == 1:
         increment_people()
     elif choice == 2:
