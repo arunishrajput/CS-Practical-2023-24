@@ -30,3 +30,5 @@ while True:
         search()
     elif choice == 0:
         break
+    else:
+        print("Invalid choice. Try again.")
