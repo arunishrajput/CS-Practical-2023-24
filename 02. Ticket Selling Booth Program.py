@@ -11,7 +11,7 @@ def sell_ticket():
     money_collected += 5
     print("Ticket sold!")
 
-def total():
+def display_total():
     print("Number of people visited:", num_people)
     print("Total money collected:", money_collected)
 
@@ -19,18 +19,19 @@ def display_tickets_sold():
     print("Number of tickets sold:", tickets_sold)    
 
 while True:
-    print("1. People visited but ticket not sold")
-    print("2. People visited and ticket also sold")
-    print("3. Display report")
-    print("4. Display number of tickets sold")
-    print("0. Exit")
-    choice = int(input("Enter your choice: "))
+    msg = '''1. People visited but ticket not sold
+2. People visited and ticket also sold
+3. Display report
+4. Display number of tickets sold
+0. Exit'''
+    choice = int(input(f"{msg},Enter your choice: "))
     if choice == 1:
         increment_people()
     elif choice == 2:
         sell_ticket()
     elif choice == 3:
-        total()
+        display_total()
+        display_tickets_sold()
     elif choice == 4:
         display_tickets_sold()
     elif choice == 0:
