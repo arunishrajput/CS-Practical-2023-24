@@ -99,14 +99,13 @@ def delete():
         print('File Not Found!')
 
 while True:
-    choice = int(input('''
-1. Enter stock
+    msg = '''1. Enter stock
 2. Display stock
 3. Search Product
 4. Modify Product
 5. Delete Product
-0. Exit
-Enter your choice:'''))
+0. Exit'''
+    choice = int(input(f"{msg}\nEnter your choice:"))
     if choice == 1:
         write()
     elif choice == 2:
