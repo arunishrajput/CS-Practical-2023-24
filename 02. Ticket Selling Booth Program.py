@@ -1,14 +1,14 @@
-num_people = total_money_collected = tickets_sold = 0
+num_people = money_collected = tickets_sold = 0
 
 def increment_people():
     global num_people
     num_people += 1
 
 def sell_ticket():
-    global num_people, total_money_collected, tickets_sold
+    global num_people, money_collected, tickets_sold
     num_people += 1
     tickets_sold += 1
-    total_money_collected += 5
+    money_collected += 5
     print("Ticket sold!")
 
 def display_num_people():
@@ -18,7 +18,7 @@ def display_tickets_sold():
     print("Number of tickets sold:", tickets_sold)
 
 def display_total_money_collected():
-    print("Total money collected:", total_money_collected)
+    print("Total money collected:", money_collected)
 
 while True:
     print("Enter 1 to increment number of people visited")
