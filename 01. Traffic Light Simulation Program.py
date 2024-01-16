@@ -1,4 +1,4 @@
-def traficlight():
+def trafficlight():
     
     code = light(input('Enter the status of light: ').upper())
     
@@ -22,5 +22,5 @@ def light(status):
     else:
         return 3
     
-traficlight()
+trafficlight()
 print('SPEED THRILLS BUT KILLS')
