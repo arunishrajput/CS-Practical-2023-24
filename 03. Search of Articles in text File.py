@@ -1,4 +1,4 @@
-file = open('test.txt', 'r')
+file = open('story.txt', 'r')
 line = file.readline().lower()
 a = an = the = 0
 while line:
