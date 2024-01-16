@@ -13,14 +13,8 @@ def trafficlight():
 
 
 def light(status):
-    if status == 'RED':
-        return 0
-    elif status == 'YELLOW':
-        return 1
-    elif status == 'GREEN':
-        return 2
-    else:
-        return 3
+    return {'RED': 0, 'YELLOW': 1, 'GREEN': 2}.get(status, 3)
+
     
 trafficlight()
 print('SPEED THRILLS BUT KILLS')
