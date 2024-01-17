@@ -9,7 +9,7 @@ def pop():
         print('Stack is underflow')
 
 stack = []
-dict = {"OM": 76, "JAI": 45, "BABITA": 89, "ARUN": 65, "ANUJ": 90, "TARUN": 82}
+stack, dict = {"OM": 76, "JAI": 45, "BABITA": 89, "ARUN": 65, "ANUJ": 90, "TARUN": 82}
 
 for name in dict.keys():
     push_greater_75(name)
