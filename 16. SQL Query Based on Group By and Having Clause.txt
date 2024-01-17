@@ -1,0 +1,29 @@
+Q 01. Display the department number and number of employees for each department.
+A 01. SELECT deptno, COUNT(empno) FROM empl GROUP BY deptno;
+
+Q 02. Display total salary paid to each department.
+A 02. SELECT deptno, SUM(sal) FROM empl GROUP BY deptno;
+
+Q 03. Display total number of employees for each department where more than two employees are working in the same department.
+A 03. SELECT deptno, COUNT(empno) FROM empl GROUP BY deptno HAVING COUNT(empno) > 2;
+
+Q 04. Display total salary paid to each job where numbers of employees are more than two for each job.
+A 04. SELECT job, SUM(sal) FROM empl GROUP BY job HAVING COUNT(job) > 2;
+
+Q 05. Display minimum and maximum salary paid for each job.
+A 05. SELECT job, MIN(sal), MAX(sal) FROM empl GROUP BY job;
+
+Q 06. Display the number of employees for the city Kolkata, Delhi and Mumbai.
+A 06. SELECT city, COUNT(empno) FROM empl GROUP BY city HAVING city IN ('Kolkata', 'Delhi', 'Mumbai');
+
+Q 07. Display average salary paid to each department where numbers of employees are less than 5.
+A 07. SELECT deptno, AVG(sal) FROM empl GROUP BY deptno HAVING COUNT(empno) < 5;
+
+Q 08. Display the number of employees for each city who is working in department number ‘30’.
+A 08. SELECT city, COUNT(empno) FROM empl WHERE deptno = 30 GROUP BY city;
+
+Q 09. Display average salary and number of employees for each city where more than two employees are belonging to same city.
+A 09. SELECT city, AVG(sal), COUNT(empno) FROM empl GROUP BY city HAVING COUNT(empno) > 2;
+
+Q 10. List the number of employees and their average salary for each department where two employees are working
+A 10. SELECT deptno, COUNT(empno), AVG(sal) FROM empl GROUP BY deptno HAVING COUNT(empno) = 2;
