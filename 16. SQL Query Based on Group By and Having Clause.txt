@@ -1,3 +1,6 @@
+SQL Query Based on Group By and Having Clause
+------------------------------------------------
+
 Q 01. Display the department number and number of employees for each department.
 A 01. SELECT deptno, COUNT(empno) FROM empl GROUP BY deptno;
 
