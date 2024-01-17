@@ -1,3 +1,5 @@
+Q. Create table employee and insert following records
+A.
 CREATE TABLE Employee (
     EmpNo INT NOT NULL,
     EmpName CHAR(20),
@@ -17,6 +19,9 @@ VALUES
   (7698, 'DEEPAK', 'MANAGER', 7839, 'KOLKATA', '1999-03-01', 4500, NULL, 30),
   (7782, 'AKASH', 'MANAGER', 7839, 'DELHI', '2011-03-01', 4000, NULL, 10);
 
+------------------------------------------------------------------------------
+
+Based on these tables write SQL statements for the following queries:
 
 Q 01. Display the list of EmpNo and EmpName.
 A 01. SELECT EmpNo, EmpName FROM Employee;
