@@ -1,0 +1,47 @@
+SQL Query Based on Aggregate Function
+----------------------------------------
+
+Q 01. Display the total number of departments.
+A 01. SELECT COUNT(DISTINCT DeptNo) FROM Employee;
+
+Q 02. Count the total number of employees working in department number '30'.
+A 02. SELECT COUNT(EmpNo) FROM Employee WHERE DeptNo = 30;
+
+Q 03. Find maximum and minimum salary for all employees.
+A 03. SELECT MAX(Sal), MIN(Sal) FROM Employee;
+
+Q 04. Find the average salary paid to clerks.
+A 04. SELECT AVG(Sal) FROM Employee WHERE Job = 'CLERK';
+
+Q 05. Find the minimum salary for the employee who is living in Delhi.
+A 05. SELECT MIN(Sal) FROM Employee WHERE City = 'DELHI';
+
+Q 06. List the number of job titles available in the employee table.
+A 06. SELECT COUNT(DISTINCT Job) FROM Employee;
+
+Q 07. Find the total number of employees who are living in Delhi.
+A 07. SELECT COUNT(EmpNo) FROM Employee WHERE City = 'DELHI';
+
+Q 08. Count the number of employees who are getting a commission.
+A 08. SELECT COUNT(EmpNo) FROM Employee WHERE Comm IS NOT NULL;
+
+Q 09. Find the total salary paid to presidents, managers, and analysts.
+A 09. SELECT SUM(Sal) FROM Employee WHERE Job IN ('PRESIDENT', 'MANAGER', 'ANALYST');
+
+Q 10. Find the average salary paid to employees other than managers, presidents, and analysts.
+A 10. SELECT AVG(Sal) FROM Employee WHERE Job NOT IN ('MANAGER', 'PRESIDENT', 'ANALYST');
+
+Q 11. Display the minimum and maximum salary paid among clerks, salesmen, and managers.
+A 11. SELECT MIN(Sal), MAX(Sal) FROM Employee WHERE Job IN ('CLERK', 'SALESMAN', 'MANAGER');
+
+Q 12. Display the hire date of the first and last joining.
+A 12. SELECT MIN(Hiredate) AS FirstJoining, MAX(Hiredate) AS LastJoining FROM Employee;
+
+Q 13. Find the average and maximum salary paid to managers and clerks.
+A 13. SELECT AVG(Sal), MAX(Sal) FROM Employee WHERE Job IN ('MANAGER', 'CLERK');
+
+Q 14. Display the minimum, maximum, and average salary paid to department number '30'.
+A 14. SELECT MIN(Sal), MAX(Sal), AVG(Sal) FROM Employee WHERE DeptNo = 30;
+
+Q 15. Find the total salary of all employees whose name starts with 'A'.
+A 15. SELECT SUM(Sal) FROM Employee WHERE EmpName LIKE 'A%';
