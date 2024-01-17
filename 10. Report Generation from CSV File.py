@@ -16,13 +16,13 @@ def create():
             print('File Overwritten Successfully!')
 
 def write():
-    if os.path.exists('student.csv'):
-        with open('student.csv', 'a', newline='\n') as file:
+    if os.path.exists('employees.csv'):
+        with open('employees.csv', 'a', newline='\n') as file:
             write  = csv.writer(file)
             ID = int(input('Enter Employee ID: '))
             name = input('Enter Employee Name: ')
             address = input('Enter Employee Address: ')
-            basic_pay = input('Enter Employee Basic Pay: ')
+            basic_pay = int(input('Enter Employee Basic Pay: '))
             record = [ID, name, address, basic_pay]
             write.writerow(record)
             print('Record Inserted Successfully!')
@@ -30,8 +30,8 @@ def write():
         print('File not exists. First Create the File!')
 
 def display():
-    if os.path.exists('student.csv'):
-        with open('student.csv', 'r', newline='\n') as file:
+    if os.path.exists('employees.csv'):
+        with open('employees.csv', 'r', newline='\n') as file:
             read = csv.reader(file)
             next(read)
             id = int(input('Enter Employee ID to Search: '))
