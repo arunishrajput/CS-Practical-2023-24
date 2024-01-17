@@ -8,7 +8,7 @@ Q 03. Display total number of employees for each department where more than two 
 A 03. SELECT deptno, COUNT(empno) FROM empl GROUP BY deptno HAVING COUNT(empno) > 2;
 
 Q 04. Display total salary paid to each job where numbers of employees are more than two for each job.
-A 04. SELECT job, SUM(sal) FROM empl GROUP BY job HAVING COUNT(job) > 2;
+A 04. SELECT job, SUM(sal) FROM empl GROUP BY job HAVING COUNT(empno) > 2;
 
 Q 05. Display minimum and maximum salary paid for each job.
 A 05. SELECT job, MIN(sal), MAX(sal) FROM empl GROUP BY job;
