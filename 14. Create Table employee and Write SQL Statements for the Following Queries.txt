@@ -1,3 +1,23 @@
+CREATE TABLE Employee (
+    EmpNo INT NOT NULL,
+    EmpName CHAR(20),
+    Job CHAR(10),
+    Mgr INT,
+    City VARCHAR(255), -- Assuming VARCHAR with a maximum length
+    Hiredate DATE,
+    Sal INT,
+    Comm NUMERIC,
+    DeptNo INT,
+    PRIMARY KEY (EmpNo)
+);
+
+INSERT INTO Employee (EmpNo, EmpName, Job, Mgr, City, Hiredate, Sal, Comm, DeptNo)
+VALUES
+  (7839, 'KING', 'PRESIDENT', NULL, 'DELHI', '1981-11-17', 5000, NULL, 10),
+  (7698, 'DEEPAK', 'MANAGER', 7839, 'KOLKATA', '1999-03-01', 4500, NULL, 30),
+  (7782, 'AKASH', 'MANAGER', 7839, 'DELHI', '2011-03-01', 4000, NULL, 10);
+
+
 Q 01. Display the list of EmpNo and EmpName.
 A 01. SELECT EmpNo, EmpName FROM Employee;
 
