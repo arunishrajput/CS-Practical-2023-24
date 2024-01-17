@@ -1,14 +1,11 @@
 stack = []
-size = 5
+
 def PUSH():
-    if len(stack) < size:
-        roll = int(input('Enter the roll number of students to push: '))
-        name = input('Enter the name of the student to push: ')
-        L = [roll, name]
-        stack.append(L)
-        print('successfully pushed!')
-    else:
-        print('Stack overflow')
+    roll = int(input('Enter the roll number of students to push: '))
+    name = input('Enter the name of the student to push: ')
+    L = [roll, name]
+    stack.append(L)
+    print('successfully pushed!')
 
 def POP():
     if len(stack) > 0:
