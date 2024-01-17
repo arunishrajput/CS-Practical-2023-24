@@ -23,18 +23,18 @@ def TRAVERSE():
         print('Stack underflow')
 
 while True:
-    print('1. Push')
-    print('2. Pop')
-    print('3. Traverse')
-    print('4. Exit')
-    ch = int(input('Enter your choice: '))
+    msg = '''1. Push
+2. Pop
+3. Traverse
+0. Exit'''
+    ch = int(input(f'{msg}\nEnter your choice: '))
     if ch == 1:
         PUSH()
     elif ch == 2:
         POP()
     elif ch == 3:
         TRAVERSE()
-    elif ch == 4:
+    elif ch == 0:
         break
     else:
         print('Invalid choice!')
