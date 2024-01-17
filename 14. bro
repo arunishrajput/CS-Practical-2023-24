@@ -1,0 +1,59 @@
+Q 01. Display the list of EmpNo and EmpName.
+A 01. SELECT EmpNo, EmpName FROM Employee;
+
+Q 02. Display the details of table Employee.
+A 02. SELECT * FROM Employee;
+
+Q 03. List the City of Employee. (Without duplicates).
+A 03. SELECT DISTINCT City FROM Employee;
+
+Q 04. Display the details of the employee whose salary is greater than 4000.
+A 04. SELECT * FROM Employee WHERE Sal > 4000;
+
+Q 05. Display the details of the employee whose commission is greater than 400.
+A 05. SELECT * FROM Employee WHERE Comm > 400;
+
+Q 06. List the EmpNo and their manager whose dept no is 20.
+A 06. SELECT EmpNo, Mgr FROM Employee WHERE DeptNo = 20;
+
+Q 07. List the EmpNo and their manager whose dept no is 20 or 30.
+A 07. SELECT EmpNo, Mgr FROM Employee WHERE DeptNo IN (20, 30);
+
+Q 08. Display the EmpNo and their annual salary of all employees.
+A 08. SELECT EmpNo, Sal * 12 AS AnnualSalary FROM Employee;
+
+Q 09. Display the EmpNo who have not been allotted to any department.
+A 09. SELECT EmpNo FROM Employee WHERE DeptNo IS NULL;
+
+Q 10. List the employee name in alphabetical order whose salary is more than 3500.
+A 10. SELECT EmpName FROM Employee WHERE Sal > 3500 ORDER BY EmpName;
+
+Q 11. Display the EmpNo and Name of salesman and their total monthly salary (salary + commission) as TotalMonthlySalary.
+A 11. SELECT EmpNo, EmpName, Sal + IFNULL(Sal + Comm, Sal) AS TotalMonthlySalary FROM Employee WHERE Job = 'SALESMAN';
+
+Q 12. List the name of the employee whose name starts with ‘A’.
+A 12. SELECT * FROM Employee WHERE EmpName LIKE 'A%';
+
+Q 13. List the name of the employee whose name does not start with ‘A’.
+A 13. SELECT * FROM Employee WHERE EmpName NOT LIKE 'A%';
+
+Q 14. List the name of the employee in reverse alphabetical order whose name contains exactly five characters.
+A 14. SELECT * FROM Employee WHERE LENGTH(EmpName) = 5 ORDER BY EmpName DESC;
+
+Q 15. List the details of the employee who belongs to either dept no 10 or 20.
+A 15. SELECT * FROM Employee WHERE DeptNo IN (10, 20);
+
+Q 16. List the employee no who belongs to dept no 20 and salary is between 2000 and 3500.
+A 16. SELECT EmpNo FROM Employee WHERE DeptNo = 20 AND Sal BETWEEN 2000 AND 3500;
+
+Q 17. List the name of the employee whose name ends with ‘D’.
+A 17. SELECT * FROM Employee WHERE EmpName LIKE '%D';
+
+Q 18. Display employee no, name, and dept no as 40, who have not been allotted any department.
+A 18. SELECT EmpNo, EmpName, DeptNo FROM Employee WHERE DeptNo IS NULL OR DeptNo = 40;
+
+Q 19. Display the employee no and name whose name contains ‘R’ as the third alphabet.
+A 19. SELECT EmpNo, EmpName FROM Employee WHERE EmpName LIKE '__R%';
+
+Q 20. List the details of the employee who is not getting a commission.
+A 20. SELECT * FROM Employee WHERE Comm IS NULL;
