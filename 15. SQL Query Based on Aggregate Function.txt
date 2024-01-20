@@ -1,5 +1,6 @@
 SQL Query Based on Aggregate Function
 
+EMPLOYEE TABLE
 +-------+--------+-----------+------+---------+------------+------+--------+--------+
 | EmpNo | EmpName| Job       | Mgr  | City    | Hiredate   | Sal  | Comm   | DeptNo |
 +-------+--------+-----------+------+---------+------------+------+--------+--------+
@@ -18,6 +19,8 @@ SQL Query Based on Aggregate Function
 | 7876  | ADAMS  | CLERK     | 7788 | KANPUR  | 1998-01-12 | 1100 | NULL   | 20     |
 | 7934  | EVE    | CLERK     | 7782 | MUMBAI  | 1994-01-23 | 1300 | NULL   | NULL   |
 +-------+--------+-----------+------+---------+------------+------+--------+--------+
+
+---------------------------------------------------------------
 
 Q 01. Display the total number of departments.
 A 01. SELECT COUNT(DISTINCT DeptNo) FROM Employee;
