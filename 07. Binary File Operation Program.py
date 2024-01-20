@@ -1,3 +1,16 @@
+'''
+Write a menu-based program for following operations on binary file 'stock.dat':-
+    1. Write data in binary file.
+    2. Display data of binary file.
+    3. Search data from binary file based on product ID.
+    4. Modify existing data of binary file based on product ID.
+    5. Delete the record from binary file based on product ID.
+
+Consider the following structure of Record in binary file:-
+    {'ID':<product_id>, 'Name':<Product_name>, 'Qty':<total_qty>, 'Price':<Price_of_product>
+'''
+#############################################################################
+
 import pickle, os
 
 def write():
