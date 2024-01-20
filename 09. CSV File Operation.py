@@ -1,3 +1,12 @@
+'''
+Write a menu-based program for following operations on a csv file:-
+    1. Create a csv file ‘student.csv’ with column header:
+        Roll, Name, Address, Contact-No
+    2. Insert the record in ‘student.csv’ file
+    3. Display the record.
+'''
+#############################################################################
+
 import csv, os
 
 def make():

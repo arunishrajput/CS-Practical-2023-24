@@ -1,5 +1,5 @@
 '''
-Write a menu based program for following operations on a csv file: -
+Write a menu based program for following operations on a csv file:-
     1. Create a csv file ‘employee.csv’ with column header: - ID, Name, Address, Basic Pay.
     2. Insert the record in ‘employee.csv’ file
     3. Display the report of an employee based on ID. Report will contain
