@@ -17,7 +17,21 @@ Q. Write the create command to create the following tables with suitable constra
     +-------+----------------+-------+-----+-----+-----------------------+-----------------+
 
     SPORTS TABLE
-    
+    +-------+-------------+--------------+-------+
+    | AdmNo | Game        | CoachName    | Grade |
+    +-------+-------------+--------------+-------+
+    | 1324  | Cricket     | Narendra     | A     |
+    | 1364  | Volleball   | M.P. Singh   | A     |
+    | 1271  | Volleball   | M.P. Singh   | B     |
+    | 1434  | Basket Ball | I . Malhotra | B     |
+    | 1461  | Cricket     | Narendra     | B     |
+    | 2328  | Basket Ball | I . Malhotra | A     |
+    | 2371  | Basket Ball | I . Malhotra | A     |
+    | 1271  | Basket Ball | I . Malhotra | A     |
+    | 1434  | Cricket     | Narendra     | A     |
+    | 2328  | Cricket     | Narendra     | A     |
+    | 1364  | Basket Ball | I . Malhotra | B     |
+    +-------+-------------+-------------+--------+    
 
 A.
 
