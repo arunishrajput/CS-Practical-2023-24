@@ -1,3 +1,22 @@
++-------+--------+-----------+------+---------+------------+------+--------+--------+
+| EmpNo | EmpName| Job       | Mgr  | City    | Hiredate   | Sal  | Comm   | DeptNo |
++-------+--------+-----------+------+---------+------------+------+--------+--------+
+| 7839  | KING   | PRESIDENT | NULL | DELHI   | 1981-11-17 | 5000 | NULL   | 10     |
+| 7698  | DEEPAK | MANAGER   | 7839 | KOLKATA | 1999-03-01 | 4500 | NULL   | 30     |
+| 7782  | AKASH  | MANAGER   | 7839 | DELHI   | 2011-03-01 | 4000 | NULL   | 10     |
+| 7566  | JONES  | MANAGER   | 7839 | MUMBAI  | 1981-04-02 | 3500 | NULL   | 20     |
+| 7654  | ALLEN  | SALESMAN  | 7698 | RANCHI  | 1997-01-08 | 2480 | 1500   | 30     |
+| 7499  | TURNER | SALESMAN  | 7698 | PATNA   | 1981-02-20 | 1600 | 500    | 30     |
+| 7844  | JAMES  | SALESMAN  | 7698 | MUMBAI  | 1993-09-08 | 1500 | 0      | 30     |
+| 7900  | WARD   | CLERK     | 7698 | CHENNAI | 1988-12-03 | 950  | NULL   | 30     |
+| 7521  | FORD   | SALESMAN  | 7698 | DELHI   | 1989-02-22 | 1250 | 400    | 30     |
+| 7902  | DONALD | ANALYST   | 7566 | DELHI   | 1987-12-03 | 3000 | NULL   | NULL   |
+| 7369  | SCOTT  | CLERK     | 7902 | KOLKATA | 1996-11-17 | 800  | NULL   | NULL   |
+| 7788  | SMITH  | ANALYST   | 7566 | NOIDA   | 1986-10-09 | 3000 | NULL   | 20     |
+| 7876  | ADAMS  | CLERK     | 7788 | KANPUR  | 1998-01-12 | 1100 | NULL   | 20     |
+| 7934  | EVE    | CLERK     | 7782 | MUMBAI  | 1994-01-23 | 1300 | NULL   | NULL   |
++-------+--------+-----------+------+---------+------------+------+--------+--------+
+
 Q. Create table employee and insert following records
 A.
 CREATE TABLE Employee (
