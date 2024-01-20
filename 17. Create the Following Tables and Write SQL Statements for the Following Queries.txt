@@ -1,4 +1,24 @@
 Q. Write the create command to create the following tables with suitable constraints
+
+    STUDENTS TABLE
+    +-------+----------------+-------+-----+-----+-----------------------+-----------------+
+    | AdmNo | Name           | Class | Sec | RNo | Address               | Phone           |
+    +-------+----------------+-------+-----+-----+-----------------------+-----------------+
+    | 1271  | Utkarsh Madaan | 12    | C   | 1   | C-32, Punjabi Bagh    | 4356154         |
+    | 1324  | Naresh Sharma  | 10    | A   | 1   | 31, Mohan Nagar       | 435654          |
+    | 1325  | Md. Yusuf      | 10    | A   | 2   | 12/21, Chand Nagar    | 145654          |
+    | 1326  | Sumedha        | 10    | B   | 23  | 59, Moti Nagar        | 4135654         |
+    | 1364  | Subya Akhtar   | 11    | B   | 13  | 12, Janak Puri        | NULL            |
+    | 1434  | Varuna         | 12    | B   | 21  | 69, Rohini            | NULL            |
+    | 1461  | David DSouza   | 11    | B   | 1   | D-34, Model Town      | 243554, 98787665|
+    | 2324  | Satinder Singh | 12    | C   | 1   | 1/2 , Gulmohar Park   | 143654          |
+    | 2328  | Peter Jones    | 10    | A   | 18  | 21/32B, Vishal Enclave| 24356154        |
+    | 2371  | Mohini Mehta   | 11    | C   | 12  | 37 Raja Garden        | 435654, 6765787 |
+    +-------+----------------+-------+-----+-----+-----------------------+-----------------+
+
+    SPORTS TABLE
+    
+
 A.
 
 STUDENTS TABLE:-
@@ -10,7 +30,7 @@ STUDENTS TABLE:-
         Sec CHAR(1) NOT NULL,
         RNo INT NOT NULL,
         Address VARCHAR(255),
-        Phone VARCHAR(15) UNIQUE
+        Phone VARCHAR(255) UNIQUE
     );
 
 SPORTS TABLE:-
