@@ -1,3 +1,29 @@
+'''
+Write a menu based program for following operations on a csv file: -
+    1. Create a csv file ‘employee.csv’ with column header: - ID, Name, Address, Basic Pay.
+    2. Insert the record in ‘employee.csv’ file
+    3. Display the report of an employee based on ID. Report will contain
+       the following information:
+        ● Name of Employee:
+        ● Total Credit:
+        ● Basic Pay:
+        ● DA:
+        ● HRA:
+        ● TPT:
+        ● Total Debit:
+        ● I-Tax:
+        ● PF:
+        ● Net Amount: Total Credit-Total Debit.
+        (Hint: Calculate DA (20% of basic pay), HRA (10% of basic pay),
+        TPT (3% of basic pay), PF (12% of basic Pay)
+        ● I-Tax as per following criteria:
+            ● If Total credit >50000, I-tax = 10% of total credit
+            ● If Total credit >40000, I-tax = 5% of total credit
+            ● If Total credit >30000, I-tax = 2% of total credit
+            ● If Total credit <=30000, I-tax = NIL).
+'''
+#############################################################################
+
 import csv, os
 
 def make():
