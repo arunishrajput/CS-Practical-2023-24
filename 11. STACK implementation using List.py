@@ -1,3 +1,10 @@
+'''
+Write a menu-based program to implement stack to show
+PUSH, POP and TRAVERSE operation, where each node of stack will
+contain, Roll of student and name of student, as information.
+'''
+#############################################################################
+
 stack = []
 
 def PUSH():
