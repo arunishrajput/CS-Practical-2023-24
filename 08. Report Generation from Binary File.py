@@ -1,3 +1,16 @@
+'''
+Write a menu based program for the following functionality in binary file 'markrec.dat':-
+    1. Read name of student and his/her marks for five subjects, and write data in 'markrec.dat'.
+    2. Display the report of any student based on name of student (input by user).
+    Report will display following information:
+        ● Name of student
+        ● Marks obtained in five subjects (including name and marks of subjects)
+        ● Total marks obtained
+        ● Total percentage
+        (Assume 500 is the maximum marks)
+'''
+#############################################################################
+
 import pickle, os
 
 def write():
