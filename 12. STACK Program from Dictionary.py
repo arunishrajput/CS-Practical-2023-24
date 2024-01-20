@@ -1,11 +1,13 @@
 '''
 Consider the following dictionary containing names and marks as key value
 pairs of 6 students.
-{"OM":76, "JAI":45, "BABITA":89, "ARUN":65, "ANUJ":90, "TARUN":82}
+    {"OM":76, "JAI":45, "BABITA":89, "ARUN":65, "ANUJ":90, "TARUN":82}
+
 Write a program, with separate user defined functions to perform the following operations:
-● Push the keys (name of the student) of the dictionary into a stack, where the corresponding
-value (marks) is greater than 75. Function will receive key as argument.
-● Pop the content of the stack and return it.
+    ● Push the keys (name of the student) of the dictionary into a stack, where the corresponding
+      value (marks) is greater than 75. Function will receive key as argument.
+    ● Pop the content of the stack and return it.
+
 Write the main program to integrate created functions to display the content of stack.
 '''
 #############################################################################
