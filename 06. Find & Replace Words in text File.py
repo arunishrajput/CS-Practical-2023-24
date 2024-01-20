@@ -1,3 +1,9 @@
+'''
+Write a program to find and replace words in text file 'test.txt'
+from user input find word and replace word.
+'''
+#############################################################################
+
 file = open('test.txt','r')
 find = input('Enter word to find:')
 content = file.read()
