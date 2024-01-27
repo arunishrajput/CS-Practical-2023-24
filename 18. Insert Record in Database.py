@@ -10,7 +10,6 @@ Address = input('Enter Address: ')
 Phone = int(input('Enter Phone no.: '))
 
 sql = f"INSERT INTO student VALUES ({Roll}, '{Name}', '{Address}', {Phone})"
-print(sql)
 cur.execute(sql)
 con.commit()
 print('Record Inserted Successfully!')
