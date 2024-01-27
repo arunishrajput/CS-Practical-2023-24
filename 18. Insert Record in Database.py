@@ -1,14 +1,14 @@
 '''
 Write a python program to insert a record in student table of Test database through user set of values.
 Assume the following structure of student table:-
-    +------------+-----------+------+
-    | Field      | Data Type | Size |
-    +------------+-----------+------+
-    | Roll       | INT       |  04  |
-    | Name       | VARCHAR   |  30  |
-    | Address    | CHAR      |  40  |
-    | Phone_no   | VARCHAR   |      |
-    +------------+-----------+------+
+    +-------------------+-----------+------+
+    | Field             | Data Type | Size |
+    +-------------------+-----------+------+
+    | Roll(Primary Key) | INT       |  04  |
+    | Name              | VARCHAR   |  30  |
+    | Address           | CHAR      |  40  |
+    | Phone_no          | VARCHAR   |      |
+    +-------------------+-----------+------+
 '''
 #############################################################################
 
