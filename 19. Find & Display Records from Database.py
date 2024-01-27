@@ -1,6 +1,7 @@
 '''
 Write a python program to find and display the record of student from student table of Test database.
 Program will search the record by the input roll no. of student. If record not found, then display appropriate message.
+
 Assume the following structure of student table:-
     +-------------------+-----------+------+
     | Field             | Data Type | Size |

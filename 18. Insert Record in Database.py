@@ -1,5 +1,6 @@
 '''
 Write a python program to insert a record in student table of Test database through user set of values.
+
 Assume the following structure of student table:-
     +-------------------+-----------+------+
     | Field             | Data Type | Size |
