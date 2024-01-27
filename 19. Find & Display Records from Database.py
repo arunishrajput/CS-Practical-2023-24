@@ -28,7 +28,7 @@ row = cur.fetchone()
 if row:
     print(row)
 else:
-    print('No Record Found!')
+    print('Record Not Found!')
 
 cur.close()
 con.close()
