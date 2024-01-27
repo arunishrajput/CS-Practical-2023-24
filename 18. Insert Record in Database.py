@@ -16,7 +16,6 @@ Assume the following structure of student table:-
 import mysql.connector as mc
 
 con = mc.connect(host = 'localhost', user = 'root', password = 'password', database = 'Test')
-
 cur = con.cursor()
 
 Roll = int(input('Enter Roll no.: '))
