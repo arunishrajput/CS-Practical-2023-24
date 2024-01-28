@@ -43,7 +43,7 @@ STUDENTS TABLE:-
         AdmNo INT PRIMARY KEY,
         Name VARCHAR(255) NOT NULL,
         Class INT NOT NULL,
-        Sec CHAR(1) NOT NULL,
+        Sec CHAR(2) NOT NULL,
         RNo INT NOT NULL,
         Address VARCHAR(255),
         Phone VARCHAR(255)
@@ -52,10 +52,10 @@ STUDENTS TABLE:-
 SPORTS TABLE:-
     
     CREATE TABLE Sports (
-        AdmNo INT PRIMARY KEY,
+        AdmNo INT NOT NULL,
         Game VARCHAR(50) NOT NULL,
         CoachName VARCHAR(255) NOT NULL,
-        Grade CHAR(1)
+        Grade CHAR(2)
     );
 
 ------------------------------------------------------------------------------
@@ -78,16 +78,16 @@ Q 05. Display details of the students of the Cricket team.
 A 05. SELECT STUDENTS.* FROM STUDENTS, SPORTS WHERE STUDENTS.AdmNo = SPORTS.AdmNo AND Game = 'Cricket';
 
 Q 06. Display the names and phone numbers of the students whose grade is 'A' and whose coach is Narendra.
-A 06. SELECT STUDENTS.Name, STUDENTS.Phone FROM STUDENTS, SPORTS WHERE STUDENTS.AdmNo = SPORTS.AdmNo AND SPORTS.Grade = 'A' AND SPORTS.CoachName = 'Narendra';
+A 06. SELECT Name, Phone FROM STUDENTS, SPORTS WHERE STUDENTS.AdmNo = SPORTS.AdmNo AND Grade = 'A' AND CoachName = 'Narendra';
 
 Q 07. Display the number of students in each class who play any game.
-A 07. SELECT STUDENTS.Class, COUNT(STUDENTS.AdmNo) AS NumberOfStudents FROM STUDENTS, SPORTS WHERE STUDENTS.AdmNo = SPORTS.AdmNo GROUP BY STUDENTS.Class;
+A 07. SELECT Class, COUNT(Name) AS NumberOfStudents FROM STUDENTS, SPORTS WHERE STUDENTS.AdmNo = SPORTS.AdmNo GROUP BY Class;
 
 Q 08. Display the number of students in class 10 who have grade 'B' in sports.
-A 08. SELECT COUNT(STUDENTS.AdmNo) AS NumberOfStudents FROM STUDENTS, SPORTS WHERE STUDENTS.AdmNo = SPORTS.AdmNo AND STUDENTS.Class = ''10'' AND SPORTS.Grade = 'B';
+A 08. SELECT COUNT(Name) AS NumberOfStudents FROM STUDENTS, SPORTS WHERE STUDENTS.AdmNo = SPORTS.AdmNo AND Class = '10' AND Grade = 'B';
 
 Q 09. Display the Number of students with each coach.
-A 09. SELECT SPORTS.CoachName, COUNT(STUDENTS.AdmNo) AS NumberOfStudents FROM STUDENTS, SPORTS WHERE STUDENTS.AdmNo = SPORTS.AdmNo GROUP BY SPORTS.CoachName;
+A 09. SELECT CoachName, COUNT(Name) AS NumberOfStudents FROM STUDENTS, SPORTS WHERE STUDENTS.AdmNo = SPORTS.AdmNo GROUP BY CoachName;
 
 Q 10. Display the number of students for each game.
-A 10. SELECT SPORTS.Game, COUNT(STUDENTS.AdmNo) AS NumberOfStudents FROM STUDENTS, SPORTS WHERE STUDENTS.AdmNo = SPORTS.AdmNo GROUP BY SPORTS.Game;
+A 10. SELECT Game, COUNT(Name) AS NumberOfStudents FROM STUDENTS, SPORTS WHERE STUDENTS.AdmNo = SPORTS.AdmNo GROUP BY Game;
