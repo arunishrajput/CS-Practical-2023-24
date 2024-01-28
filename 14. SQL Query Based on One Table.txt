@@ -22,7 +22,7 @@ Q. Create table employee and insert following records
 
 A.
 CREATE TABLE Employee (
-    EmpNo INT NOT NULL,
+    EmpNo INT NOT NULL PRIMARY KEY,
     EmpName CHAR(20),
     Job CHAR(10),
     Mgr INT,
@@ -31,7 +31,6 @@ CREATE TABLE Employee (
     Sal INT,
     Comm NUMERIC,
     DeptNo INT,
-    PRIMARY KEY (EmpNo)
 );
 
 INSERT INTO Employee (EmpNo, EmpName, Job, Mgr, City, Hiredate, Sal, Comm, DeptNo)
