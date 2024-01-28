@@ -77,7 +77,7 @@ Q 10. List the employee name in alphabetical order whose salary is more than 350
 A 10. SELECT EmpName FROM Employee WHERE Sal > 3500 ORDER BY EmpName;
 
 Q 11. Display the EmpNo and Name of salesman and their total monthly salary (salary + commission) as TotalMonthlySalary.
-A 11. SELECT EmpNo, EmpName, Sal + IFNULL(Sal + Comm, Sal) AS TotalMonthlySalary FROM Employee WHERE Job = 'SALESMAN';
+A 11. SELECT EmpNo, EmpName, Sal + IFNULL(Comm, 0) AS TotalMonthlySalary FROM Employee WHERE Job = 'SALESMAN';
 
 Q 12. List the name of the employee whose name starts with 'A'.
 A 12. SELECT EmpName FROM Employee WHERE EmpName LIKE 'A%';
