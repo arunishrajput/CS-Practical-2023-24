@@ -42,11 +42,11 @@ STUDENTS TABLE:-
     CREATE TABLE Students (
         AdmNo INT PRIMARY KEY,
         Name VARCHAR(255) NOT NULL,
-        Class VARCHAR(10) NOT NULL,
+        Class INT NOT NULL,
         Sec CHAR(1) NOT NULL,
         RNo INT NOT NULL,
         Address VARCHAR(255),
-        Phone VARCHAR(255) UNIQUE
+        Phone VARCHAR(255)
     );
 
 SPORTS TABLE:-
