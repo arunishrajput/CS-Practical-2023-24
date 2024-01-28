@@ -78,13 +78,13 @@ Q 11. Display the EmpNo and Name of salesman and their total monthly salary (sal
 A 11. SELECT EmpNo, EmpName, Sal + IFNULL(Sal + Comm, Sal) AS TotalMonthlySalary FROM Employee WHERE Job = 'SALESMAN';
 
 Q 12. List the name of the employee whose name starts with 'A'.
-A 12. SELECT * FROM Employee WHERE EmpName LIKE 'A%';
+A 12. SELECT EmpName FROM Employee WHERE EmpName LIKE 'A%';
 
 Q 13. List the name of the employee whose name does not start with 'A'.
-A 13. SELECT * FROM Employee WHERE EmpName NOT LIKE 'A%';
+A 13. SELECT EmpName FROM Employee WHERE EmpName NOT LIKE 'A%';
 
 Q 14. List the name of the employee in reverse alphabetical order whose name contains exactly five characters.
-A 14. SELECT * FROM Employee WHERE LENGTH(EmpName) = 5 ORDER BY EmpName DESC;
+A 14. SELECT EmpName FROM Employee WHERE LENGTH(EmpName) = 5 ORDER BY EmpName DESC;
 
 Q 15. List the details of the employee who belongs to either dept no 10 or 20.
 A 15. SELECT * FROM Employee WHERE DeptNo IN (10, 20);
@@ -93,13 +93,13 @@ Q 16. List the employee no who belongs to dept no 20 and salary is between 2000 
 A 16. SELECT EmpNo FROM Employee WHERE DeptNo = 20 AND Sal BETWEEN 2000 AND 3500;
 
 Q 17. List the name of the employee whose name ends with 'D'.
-A 17. SELECT * FROM Employee WHERE EmpName LIKE '%D';
+A 17. SELECT EmpName FROM Employee WHERE EmpName LIKE '%D';
 
 Q 18. Display employee no, name, and dept no as 40, who have not been allotted any department.
-A 18. SELECT EmpNo, EmpName, DeptNo FROM Employee WHERE DeptNo IS NULL OR DeptNo = 40;
+A 18. SELECT EmpNo,EmpName, ifnull(DeptNo,40) as DeptNo FROM Employee WHERE DeptNo IS NULL;
 
 Q 19. Display the employee no and name whose name contains 'R' as the third alphabet.
 A 19. SELECT EmpNo, EmpName FROM Employee WHERE EmpName LIKE '__R%';
 
 Q 20. List the details of the employee who is not getting a commission.
-A 20. SELECT * FROM Employee WHERE Comm IS NULL;
+A 20. SELECT * FROM Employee WHERE Comm IS NULL OR Comm = 0;

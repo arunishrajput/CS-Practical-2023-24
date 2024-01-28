@@ -44,7 +44,7 @@ Q 07. Find the total number of employees who are living in Delhi.
 A 07. SELECT COUNT(EmpNo) FROM Employee WHERE City = 'DELHI';
 
 Q 08. Count the number of employees who are getting a commission.
-A 08. SELECT COUNT(EmpNo) FROM Employee WHERE Comm IS NOT NULL;
+A 08. SELECT COUNT(EmpNo) FROM Employee WHERE Comm IS NOT NULL OR Comm <> 0;
 
 Q 09. Find the total salary paid to presidents, managers, and analysts.
 A 09. SELECT SUM(Sal) FROM Employee WHERE Job IN ('PRESIDENT', 'MANAGER', 'ANALYST');
