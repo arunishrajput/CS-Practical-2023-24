@@ -34,13 +34,11 @@ CREATE TABLE Employee (
 );
 
 INSERT INTO Employee (EmpNo, EmpName, Job, Mgr, City, Hiredate, Sal, Comm, DeptNo)
-VALUES
-  (7839, 'KING', 'PRESIDENT', NULL, 'DELHI', '1981-11-17', 5000, NULL, 10),
-  (7698, 'DEEPAK', 'MANAGER', 7839, 'KOLKATA', '1999-03-01', 4500, NULL, 30);
+VALUES(7839, 'KING', 'PRESIDENT', NULL, 'DELHI', '1981-11-17', 5000, NULL, 10);
 
-INSERT INTO Employee
-VALUES
-  (7782, 'AKASH', 'MANAGER', 7839, 'DELHI', '2011-03-01', 4000, NULL, 10);
+INSERT INTO Employee(7698, 'DEEPAK', 'MANAGER', 7839, 'KOLKATA', '1999-03-01', 4500, NULL, 30);
+
+INSERT INTO Employee VALUES(7782, 'AKASH', 'MANAGER', 7839, 'DELHI', '2011-03-01', 4000, NULL, 10);
 
 ------------------------------------------------------------------------------
 
