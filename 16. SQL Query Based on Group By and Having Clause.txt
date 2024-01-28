@@ -44,7 +44,7 @@ Q 07. Display average salary paid to each department where numbers of employees 
 A 07. SELECT deptno, AVG(sal) FROM employee GROUP BY deptno HAVING COUNT(empno) < 5;
 
 Q 08. Display the number of employees for each city who is working in department number ‘30’.
-A 08. SELECT city, COUNT(empno) FROM employee WHERE deptno = 30 GROUP BY city;
+A 08. SELECT city, COUNT(empno) FROM employee GROUP BY city HAVING deptno = 30;
 
 Q 09. Display average salary and number of employees for each city where more than two employees are belonging to same city.
 A 09. SELECT city, AVG(sal), COUNT(empno) FROM employee GROUP BY city HAVING COUNT(empno) > 2;
