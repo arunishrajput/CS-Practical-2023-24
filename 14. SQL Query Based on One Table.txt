@@ -30,7 +30,7 @@ CREATE TABLE Employee (
     Hiredate DATE,
     Sal INT,
     Comm NUMERIC,
-    DeptNo INT,
+    DeptNo INT
 );
 
 INSERT INTO Employee (EmpNo, EmpName, Job, Mgr, City, Hiredate, Sal, Comm, DeptNo)
