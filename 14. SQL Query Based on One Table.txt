@@ -50,7 +50,7 @@ Q 01. Display the list of EmpNo and EmpName.
 A 01. SELECT EmpNo, EmpName FROM Employee;
 
 Q 02. Display the details of table Employee.
-A 02. SELECT * FROM Employee;
+A 02. DESCRIBE Employee;
 
 Q 03. List the City of Employee. (Without duplicates).
 A 03. SELECT DISTINCT City FROM Employee;
