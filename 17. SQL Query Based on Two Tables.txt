@@ -63,19 +63,19 @@ SPORTS TABLE:-
 Based on these tables write SQL statements for the following queries:
 
 Q 01. Display the lowest and the highest classes for the game Cricket.
-A 01. SELECT MIN(STUDENTS.Class) AS LowestClass, MAX(STUDENTS.Class) AS HighestClass FROM STUDENTS, SPORTS WHERE STUDENTS.AdmNo = SPORTS.AdmNo AND Game = 'Cricket';
+A 01. SELECT MIN(Class) AS LowestClass, MAX(Class) AS HighestClass FROM STUDENTS, SPORTS WHERE STUDENTS.AdmNo = SPORTS.AdmNo AND Game = 'Cricket';
 
 Q 02. Display the details of students in ascending order of admission number who play any game.
 A 02. SELECT STUDENTS.* FROM STUDENTS, SPORTS WHERE STUDENTS.AdmNo = SPORTS.AdmNo ORDER BY STUDENTS.AdmNo ASC;
 
 Q 03. Display the Admission number, name, class, section, and roll number of the students whose grade in the Sports table is 'A'.
-A 03. SELECT STUDENTS.AdmNo, STUDENTS.Name, STUDENTS.Class, STUDENTS.Sec, STUDENTS.RNo FROM STUDENTS, SPORTS WHERE STUDENTS.AdmNo = SPORTS.AdmNo AND SPORTS.Grade = 'A';
+A 03. SELECT STUDENTS.AdmNo, Name, Class, Sec, RNo FROM STUDENTS, SPORTS WHERE STUDENTS.AdmNo = SPORTS.AdmNo AND Grade = 'A';
 
 Q 04. Display the name and phone number of the students of class 12 who play some game.
-A 04. SELECT STUDENTS.Name, STUDENTS.Phone FROM STUDENTS, SPORTS WHERE STUDENTS.AdmNo = SPORTS.AdmNo AND STUDENTS.Class = '12';
+A 04. SELECT Name, Phone FROM STUDENTS, SPORTS WHERE STUDENTS.AdmNo = SPORTS.AdmNo AND Class = '12';
 
 Q 05. Display details of the students of the Cricket team.
-A 05. SELECT STUDENTS.* FROM STUDENTS, SPORTS WHERE STUDENTS.AdmNo = SPORTS.AdmNo AND SPORTS.Game = 'Cricket';
+A 05. SELECT STUDENTS.* FROM STUDENTS, SPORTS WHERE STUDENTS.AdmNo = SPORTS.AdmNo AND Game = 'Cricket';
 
 Q 06. Display the names and phone numbers of the students whose grade is 'A' and whose coach is Narendra.
 A 06. SELECT STUDENTS.Name, STUDENTS.Phone FROM STUDENTS, SPORTS WHERE STUDENTS.AdmNo = SPORTS.AdmNo AND SPORTS.Grade = 'A' AND SPORTS.CoachName = 'Narendra';
