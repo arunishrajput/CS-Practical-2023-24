@@ -1,4 +1,4 @@
-                    SQL Query Based on Two Tables
+SQL Query Based on Two Tables
 
 Q. Write the create command to create the following tables with suitable constraints
 
