@@ -21,9 +21,9 @@ cur = con.cursor()
 Roll = int(input('Enter Roll no.: '))
 Name = input('Enter Name: ')
 Address = input('Enter Address: ')
-Phone = int(input('Enter Phone no.: '))
+Phone = input('Enter Phone no.: ')
 
-sql = f"INSERT INTO student VALUES ({Roll}, '{Name}', '{Address}', {Phone})"
+sql = f"INSERT INTO student VALUES ({Roll}, '{Name}', '{Address}', '{Phone}')"
 cur.execute(sql)
 con.commit()
 print('Record Inserted Successfully!')
