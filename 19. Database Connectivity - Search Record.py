@@ -9,7 +9,7 @@ Assume the following structure of student table:-
     | Roll(Primary Key) | INT       |  04  |
     | Name              | VARCHAR   |  30  |
     | Address           | CHAR      |  40  |
-    | Phone_no          | VARCHAR   |      |
+    | Phone_no          | INT       |      |
     +-------------------+-----------+------+
 '''
 #############################################################################
