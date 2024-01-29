@@ -20,12 +20,11 @@ Assume the following structure of game table:-
 import mysql.connector as mc
 
 def insert():
-    con = mc.connect(host = 'localhost', user = 'root', password = 'password', database = 'Test')
     cur = con.cursor()
 
     Gcode = int(input('Enter Game Code: '))
     GameName = input('Enter Game Name: ')
-    PrizeMoney = int(input('Enter Prize Money: '))
+    PrizeMoney = float(input('Enter Prize Money: '))
     ScheduleDate = input('Enter Schedule Date: ')
 
     sql = f"INSERT INTO game VALUES ({Gcode}, '{GameName}', {PrizeMoney}, '{ScheduleDate}')"
@@ -34,10 +33,8 @@ def insert():
     print('Record Inserted Successfully!')
 
     cur.close()
-    con.close()
 
 def display():
-    con = mc.connect(host = 'localhost', user = 'root', password = 'password', database = 'Test')
     cur = con.cursor()
 
     game = input('Enter Game Name to display record: ')
@@ -52,10 +49,8 @@ def display():
         print('Record Not Found!')
 
     cur.close()
-    con.close()
 
 def update():
-    con = mc.connect(host = 'localhost', user = 'root', password = 'password', database = 'Test')
     cur = con.cursor()
 
     game = input('Enter Game Name to update PrizeMoney and ScheduleDate: ')
@@ -64,7 +59,7 @@ def update():
     cur.execute(sql)
 
     if cur.fetchone():
-        PrizeMoney = int(input('Enter new Prize Money: '))
+        PrizeMoney = float(input('Enter new Prize Money: '))
         ScheduleDate = input('Enter new Schedule Date: ')
         sql = f"UPDATE game SET PrizeMoney = {PrizeMoney}, ScheduleDate = '{ScheduleDate}' WHERE GameName = '{game}'"
         cur.execute(sql)
@@ -74,10 +69,8 @@ def update():
         print('Record not found!')
 
     cur.close()
-    con.close()
 
 def delete():
-    con = mc.connect(host = 'localhost', user = 'root', password = 'password', database = 'Test')
     cur = con.cursor()
 
     Gcode = int(input('Enter Game Code to delete its record: '))
@@ -94,8 +87,8 @@ def delete():
         print('Record not found!')
 
     cur.close()
-    con.close()
 
+con = mc.connect(host = 'localhost', user = 'root', password = 'password', database = 'Test')
 while True:
     msg = '''1. Insert record into game
 2. Display record
@@ -115,3 +108,5 @@ while True:
         break
     else:
         print('Invalid choice!')
+
+con.close()
