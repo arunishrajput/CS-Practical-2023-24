@@ -19,7 +19,7 @@ def pushodd(L):
         if ele % 2 != 0:
             stack.append(ele)
 
-def pop(L):
+def pop():
     if len(stack) > 0:
         return stack.pop()
     else:
@@ -39,4 +39,4 @@ print("Stack Contents (odd numbers):", end=" ")
 
 
 while stack:
-    print(pop(integers), end=' ')
+    print(pop(), end=' ')
