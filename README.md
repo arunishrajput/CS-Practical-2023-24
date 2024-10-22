@@ -11,5 +11,12 @@ You can view the solutions with a user-friendly interface on the GitHub Pages si
 - Organized solutions for easy navigation
 - Clean and simple design
 
+## Contributors
+
+<a href="https://github.com/arunishrajput/CS-Practical-2023-24/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=arunishrajput/CS-Practical-2023-24" />
+</a>
+
+---
 Feel free to explore and contribute!
 Clone this repository and run the Python files to see the solutions in action.
